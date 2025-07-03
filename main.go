@@ -1,6 +1,15 @@
-var counter int
-for i := 0; i < 1000; i++ {
-    go func() {
-        counter++
-    }()
+package main
+
+import (
+    "fmt"
+    "math"
+)
+
+func main() {
+    // declares the variable x
+    var x int64 = math.MaxInt64
+
+    // 9223372036854775807
+    fmt.Println(x)
 }
+
