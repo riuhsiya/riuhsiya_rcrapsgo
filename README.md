@@ -169,6 +169,18 @@ func main() {
 
 ```
 
+raceConditions with sync/atomic
+```golang
+var counter int32
+
+for i := 0; i < 1000; i++ {
+    go func() {
+        atomic.AddInt32(&counter, 1)
+    }()
+}
+
+```
+
 raceConditions with Channel
 ```golang
 package main
